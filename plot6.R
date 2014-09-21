@@ -33,7 +33,7 @@ BLTLAmveh <- sqldf("select e.year Year,
                  group by e.year, e.fips")
 
 # construct plot
-# setting fill = type will color the facet by type
+# setting fill = City will color the facet by City
 g0 <- ggplot(data = BLTLAmveh, aes(factor(Year), tot_emissions, fill = City))
 # add layers
 # setting stat = identity will result in the height of the bar representing the value i.e. Emissions
